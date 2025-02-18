@@ -4,11 +4,13 @@
 name: Workflow de Integração Contínua
 
 on:
+  push:
+    branches: [ "main", "develop" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "develop" ]
 
 jobs:
-  testes:
+  continuos-integration:
 
     runs-on: ubuntu-latest
 
